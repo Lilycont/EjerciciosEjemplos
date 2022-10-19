@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>User List</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list *ngFor="let users of user " [routerLink]="['/profile/'+ users.id]" >
+  <ion-item>
+    <ion-label>{{users.name}}</ion-label>
+  </ion-item>
+</ion-list>
+
+</ion-content>
